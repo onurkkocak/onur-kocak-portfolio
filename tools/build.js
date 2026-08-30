@@ -444,6 +444,13 @@ ${li(app.privacy.thirdParty)}
       title: ["Veri saklama ve güvenlik", "Retention and security"],
       body: `        <p data-en="Data is kept only for as long as the feature it belongs to requires it, and is protected with industry-standard measures such as encrypted transport. No method of transmission over the internet is ever completely secure, so absolute security cannot be guaranteed.">
           Veriler, ait oldukları özellik için gerekli olduğu sürece saklanır ve şifreli iletim gibi sektör standardı önlemlerle korunur. İnternet üzerinden hiçbir veri aktarımı tümüyle güvenli olmadığından mutlak güvenlik garanti edilemez.
+        </p>
+        <!-- TODO(onur): Supabase projenin bölgesini biliyorsan "yurt dışında" yerine ülkeyi yaz -->
+        <p data-en="App data is held on Supabase infrastructure, and the other services named above run on their providers' own servers. These servers may sit outside Turkey, which means your data may be processed abroad.">
+          Uygulama verileri Supabase altyapısında, yukarıda adı geçen diğer servislerin verileri ise kendi sağlayıcılarının sunucularında tutulur. Bu sunucular Türkiye dışında bulunabilir; dolayısıyla verilerin yurt dışında işlenmesi söz konusu olabilir.
+        </p>
+        <p data-en-html="You can ask for your account and the data attached to it to be deleted at any time by writing to <a href='mailto:${site.email}'>${site.email}</a>.">
+          Hesabının ve ona bağlı verilerin silinmesini istediğin zaman <a href="mailto:${site.email}">${site.email}</a> adresine yazarak talep edebilirsin.
         </p>`,
     },
     {

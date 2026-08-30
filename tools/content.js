@@ -106,6 +106,8 @@ const apps = [
          "Basic technical data such as crash and error logs."],
       ],
       thirdParty: [
+        ["Supabase — hesap ve uygulama verilerinin saklandığı veritabanı altyapısı",
+         "Supabase — the database infrastructure holding accounts and app data"],
         ["Google Gemini — rota önerilerinin üretilmesi",
          "Google Gemini — generating route suggestions"],
         ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
@@ -202,6 +204,8 @@ const apps = [
          "Your in-app preferences, token balance and past reading history."],
       ],
       thirdParty: [
+        ["Supabase — hesap, fal geçmişi ve yüklenen fotoğrafların saklandığı veritabanı altyapısı",
+         "Supabase — the database infrastructure holding accounts, reading history and uploaded photos"],
         ["Google Gemini — fal ve yorum metinlerinin üretilmesi",
          "Google Gemini — generating reading and interpretation text"],
         ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
@@ -298,7 +302,8 @@ const apps = [
          "Basic technical data such as crash and error logs."],
       ],
       thirdParty: [
-        ["Çok oyunculu eşleşme ve sunucu altyapısı", "Multiplayer matchmaking and server infrastructure"],
+        ["Supabase — hesap, veritabanı ve çok oyunculu eşleşme altyapısı",
+         "Supabase — accounts, database and multiplayer matchmaking infrastructure"],
         ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
          "RevenueCat — in-app purchase and subscription management"],
         ["Google AdMob — uygulama içinde reklam gösterimi",
@@ -388,7 +393,8 @@ const apps = [
          "Basic technical data such as crash and error logs."],
       ],
       thirdParty: [
-        ["Çok oyunculu eşleşme ve sunucu altyapısı", "Multiplayer matchmaking and server infrastructure"],
+        ["Supabase — hesap, veritabanı ve çok oyunculu eşleşme altyapısı",
+         "Supabase — accounts, database and multiplayer matchmaking infrastructure"],
         ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
          "RevenueCat — in-app purchase and subscription management"],
         ["Google AdMob — uygulama içinde reklam gösterimi",
