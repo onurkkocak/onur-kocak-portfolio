@@ -86,6 +86,26 @@ koy — yoksa metin değişimi ikonu siler:
 <a class="back">{ikon}<span data-en="All apps">Tüm uygulamalar</span></a>
 ```
 
+## Ziyaretçi istatistikleri
+
+Site GoatCounter kullanır: çerez koymaz, IP kaydetmez, kimseyi siteler arasında
+takip etmez — bu yüzden çerez onay banner'ı gerekmez. Tekil ziyaretçi sayımı
+her gün yeniden tuzlanan bir hash ile yapılır, yani sayım günlüktür ve kimseye
+geri götürülemez.
+
+Açmak için:
+
+1. [goatcounter.com](https://www.goatcounter.com) üzerinde ücretsiz hesap aç.
+   Sana `<kod>.goatcounter.com` biçiminde bir adres verecek.
+2. `assets/js/analytics.js` içindeki `CODE` değişkenine o kodu yaz.
+3. Commit'le ve pushla.
+
+`CODE` boş olduğu sürece hiçbir şey yüklenmez — tek bir istek bile gitmez.
+
+Kendi ziyaretlerini saymamak için siteyi bir kez
+`https://onur-kocak.com/#toggle-goatcounter` adresiyle aç; o tarayıcı artık
+sayılmaz. Localhost zaten otomatik yok sayılır.
+
 ## Denetim araçları
 
 ```bash

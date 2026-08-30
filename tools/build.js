@@ -175,6 +175,7 @@ ${links}
 
 <script src="/assets/js/i18n.js" defer></script>
 <script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/analytics.js" defer></script>
 </body>
 </html>`;
 }
@@ -563,6 +564,16 @@ ${nav()}
 
     <div class="policy-list" data-stagger="80">
 ${cards}
+    </div>
+
+    <div class="site-note" data-reveal>
+      <h2 data-en="About this website">Bu site hakkında</h2>
+      <p data-en="This site keeps no accounts and asks for nothing about you. Visits are counted with GoatCounter, which sets no cookies, records no IP addresses and does not track anyone between sites — so there is no consent banner to click away.">
+        Bu sitede hesap yok ve senden hiçbir bilgi istenmiyor. Ziyaretler GoatCounter ile sayılıyor; çerez kullanmıyor, IP adresi kaydetmiyor ve kimseyi siteler arasında takip etmiyor — bu yüzden kapatman gereken bir çerez uyarısı da yok.
+      </p>
+      <p data-en="What is recorded is aggregate only: page, country, browser and where the visit came from. None of it identifies anyone.">
+        Kaydedilen şey yalnızca toplu veri: hangi sayfa, hangi ülke, hangi tarayıcı ve ziyaretin nereden geldiği. Hiçbiri kimseyi tanımlamaz.
+      </p>
     </div>
   </div>
 </main>
