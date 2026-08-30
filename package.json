@@ -1,0 +1,17 @@
+{
+  "name": "onur-kocak-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "onur-kocak.com — portfolio site. Static output, served straight from the repo root by GitHub Pages.",
+  "scripts": {
+    "build": "node tools/build.js",
+    "images": "node tools/prepare-images.js",
+    "dev": "node tools/serve.js",
+    "check:i18n": "node tools/check-i18n.js",
+    "check:responsive": "node tools/check-responsive.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.0.0",
+    "sharp": "^0.34.0"
+  }
+}

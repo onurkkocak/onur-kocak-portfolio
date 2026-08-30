@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="0.55" stop-color="#ff4d9d"/>
+      <stop offset="1" stop-color="#22e0c8"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.2" cy="0.1" r="0.6">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.85" cy="0.25" r="0.55">
+      <stop offset="0" stop-color="#ff4d9d" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ff4d9d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="0.5" cy="1" r="0.6">
+      <stop offset="0" stop-color="#22e0c8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#22e0c8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#06060c"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect width="1200" height="630" fill="url(#glow3)"/>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <!-- mark -->
+    <rect x="88" y="96" width="76" height="76" rx="21" fill="url(#brand)"/>
+    <text x="126" y="147" text-anchor="middle" font-size="30" font-weight="800" fill="#fff" letter-spacing="-1">OK</text>
+
+    <text x="184" y="147" font-size="30" font-weight="700" fill="#f4f4fb" letter-spacing="-0.5">Onur Koçak</text>
+
+    <text x="88" y="298" font-size="82" font-weight="800" fill="#f4f4fb" letter-spacing="-3">Mobil uygulama</text>
+    <text x="88" y="388" font-size="82" font-weight="800" fill="url(#brand)" letter-spacing="-3">ve oyun geliştirici.</text>
+
+    <text x="88" y="462" font-size="27" fill="#b6b6cc">ViBeRoute · Firuzan Abla · Geçiş Oyunu · Klasik Tavla</text>
+
+    <g font-size="23" font-weight="600" fill="#7c7c96">
+      <text x="88" y="552">onur-kocak.com</text>
+    </g>
+  </g>
+
+  <g opacity="0.9">
+    <rect x="905" y="150" width="200" height="410" rx="34" fill="#14141f" stroke="#2c2c3a" stroke-width="2"/>
+    <rect x="917" y="162" width="176" height="386" rx="26" fill="#0a0a12"/>
+    <circle cx="1005" cy="355" r="62" fill="url(#brand)" opacity="0.75"/>
+  </g>
+</svg>

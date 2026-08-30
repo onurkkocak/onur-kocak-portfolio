@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VibeRoute — Geziyi anlat, gerisini yapay zekâ halletsin.</title>
+<meta name="description" data-en-content="VibeRoute draws a trip route made for you out of a handful of preferences. Say who you're travelling with, when, in which direction, in what style and on what budget — and get a plan split into days, stops along the way included." content="VibeRoute, birkaç tercihinden yola çıkıp sana özel bir gezi rotası çizer. Kiminle gittiğini, tarihini, yönünü, tarzını ve bütçeni söyle; günlere bölünmüş, yol üstü duraklarıyla birlikte hazır bir plan al.">
+<meta name="author" content="Onur Koçak">
+<meta name="theme-color" content="#06060c">
+<link rel="canonical" href="https://onur-kocak.com/uygulamalar/viberoute/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://onur-kocak.com/uygulamalar/viberoute/">
+<meta property="og:site_name" content="Onur Koçak">
+<meta property="og:title" data-en-content="VibeRoute — Describe your trip — AI does the rest." content="VibeRoute — Geziyi anlat, gerisini yapay zekâ halletsin.">
+<meta property="og:description" data-en-content="VibeRoute draws a trip route made for you out of a handful of preferences. Say who you're travelling with, when, in which direction, in what style and on what budget — and get a plan split into days, stops along the way included." content="VibeRoute, birkaç tercihinden yola çıkıp sana özel bir gezi rotası çizer. Kiminle gittiğini, tarihini, yönünü, tarzını ve bütçeni söyle; günlere bölünmüş, yol üstü duraklarıyla birlikte hazır bir plan al.">
+<meta property="og:image" content="https://onur-kocak.com/assets/img/og/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/app.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+
+<body data-app="viberoute">
+<a class="skip" href="#main" data-en="Skip to content">İçeriğe atla</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="/">
+      <span class="brand__mark">OK</span>
+      <span>Onur Koçak</span>
+    </a>
+
+    <nav class="nav__links" id="nav-links" aria-label="Ana menü" data-en-aria-label="Main menu">
+      <a href="/#uygulamalar" data-en="Apps">Uygulamalar</a>
+      <a href="/#hakkimda" data-en="About">Hakkımda</a>
+      <a href="/#iletisim" data-en="Contact">İletişim</a>
+    </nav>
+
+    <div class="nav__actions">
+      <div class="lang" role="group" aria-label="Dil seçimi" data-en-aria-label="Language">
+        <span class="lang__thumb" aria-hidden="true"></span>
+        <button type="button" data-lang-btn="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menü" data-en-aria-label="Menu"><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="app-hero">
+    <div class="shell">
+      <a class="back" href="/#uygulamalar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All apps">Tüm uygulamalar</span></a>
+
+      <div class="app-hero__grid">
+        <div class="app-hero__text">
+          <div class="app-id" data-reveal>
+            <div class="app-id__icon" aria-hidden="true">🧭</div>
+            <div>
+              <div class="app-id__meta" data-en="Travel · AI">Seyahat · Yapay zekâ</div>
+              <div class="app-id__name">VibeRoute</div>
+            </div>
+          </div>
+
+          <h1 data-reveal style="--d:80ms" data-en="Describe your trip — AI does the rest.">Geziyi anlat, gerisini yapay zekâ halletsin.</h1>
+
+          <p class="lede" data-reveal style="--d:150ms" data-en="VibeRoute draws a trip route made for you out of a handful of preferences. Say who you're travelling with, when, in which direction, in what style and on what budget — and get a plan split into days, stops along the way included.">VibeRoute, birkaç tercihinden yola çıkıp sana özel bir gezi rotası çizer. Kiminle gittiğini, tarihini, yönünü, tarzını ve bütçeni söyle; günlere bölünmüş, yol üstü duraklarıyla birlikte hazır bir plan al.</p>
+
+          <div class="app-hero__chips" data-reveal style="--d:210ms">
+            <span class="chip" data-en="AI routing">Yapay zekâ rota</span>
+            <span class="chip" data-en="Daily agenda">Günlük ajanda</span>
+            <span class="chip" data-en="Stops en route">Yol üstü duraklar</span>
+            <span class="chip" data-en="Shared plans">Ortak plan</span>
+            <span class="chip" data-en="Turkish · English">Türkçe · İngilizce</span>
+          </div>
+
+          <div data-reveal style="--d:270ms">
+            <div class="stores">
+              <a class="store" href="https://apps.apple.com/tr/app/viberoute/id6785224260?l=tr" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.04c-.03-2.9 2.37-4.3 2.48-4.36-1.35-1.98-3.46-2.25-4.21-2.28-1.79-.18-3.5 1.05-4.41 1.05-.91 0-2.31-1.03-3.8-1-1.96.03-3.77 1.14-4.78 2.89-2.04 3.54-.52 8.78 1.46 11.65.97 1.4 2.12 2.98 3.63 2.92 1.46-.06 2.01-.94 3.77-.94 1.76 0 2.26.94 3.8.91 1.57-.03 2.56-1.43 3.52-2.84 1.11-1.63 1.56-3.21 1.59-3.29-.03-.02-3.05-1.17-3.05-4.71zM14.2 3.9c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.38 1.73-.74.86-1.39 2.23-1.21 3.55 1.29.1 2.6-.65 3.4-1.62z"/></svg>
+                <span class="store__text"><small data-en="Download on the">İndir</small><strong>App Store</strong></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-hero__stage">
+          <div class="shot shot--tall shot--float">
+            <img src="/assets/img/apps/viberoute/3-gun-ajanda.webp" width="720" height="1558"
+                 alt="Günlük ajanda görünümü" data-en-alt="Day-by-day agenda view"
+                 loading="lazy" decoding="async">
+          </div>
+          <div class="shot shot--tall shot--float">
+            <img src="/assets/img/apps/viberoute/1-ana-ekran.webp" width="720" height="1558"
+                 alt="Ana ekran: gezi tercihleri ve Rotamı Çiz" data-en-alt="Home screen: trip preferences and Draw My Route"
+                 fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ozellikler">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-en="Features">Öne çıkanlar</span>
+        <h2 class="h2" data-en="What it does">Neler yapıyor</h2>
+      </div>
+      <div class="features" data-stagger="70">
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">✨</div>
+          <h3 data-en="Draw My Route">Rotamı Çiz</h3>
+          <p data-en="Who with, when, which direction, which region, what style, what budget — six choices and your route appears.">Kiminle, tarih, yön, bölge, tarz ve bütçe — altı seçim yeterli, rotan çıkıyor.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🗓️</div>
+          <h3 data-en="A day-by-day agenda">Gün gün ajanda</h3>
+          <p data-en="Your trip is split into days, so you can see how each one will unfold before it starts.">Gezin günlere bölünür; her günün nasıl geçeceğini önceden görürsün.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">📍</div>
+          <h3 data-en="Stops along the way">Yol üstü duraklar</h3>
+          <p data-en="The stops worth making between two cities are folded into your route automatically.">İki şehir arasında kaçırılmaması gereken duraklar rotana kendiliğinden eklenir.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🧭</div>
+          <h3 data-en="Live trip tracking">Aktif gezi takibi</h3>
+          <p data-en="Follow your plan step by step on the road — where you are and what's next.">Yoldayken planını adım adım takip et, nerede olduğunu ve sıradakini gör.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">👥</div>
+          <h3 data-en="Plan together">Ortak plan</h3>
+          <p data-en="Plan the same trip with friends so everyone is looking at the same itinerary.">Aynı geziyi arkadaşlarınla birlikte planla; herkes aynı programı görsün.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🏙️</div>
+          <h3 data-en="About the city">Şehir hakkında</h3>
+          <p data-en="What you need to know about where you're going, right inside the trip.">Gideceğin yer hakkında bilmen gerekenler, gezinin içinde hazır.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ekranlar">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-en="Screens">Ekranlar</span>
+        <h2 class="h2" data-en="A look inside">İçeriden bir bakış</h2>
+      </div>
+      <div class="gallery">
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/viberoute/1-ana-ekran.webp" width="720" height="1558"
+                 alt="Ana ekran: gezi tercihleri ve Rotamı Çiz" data-en-alt="Home screen: trip preferences and Draw My Route"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/viberoute/3-gun-ajanda.webp" width="720" height="1558"
+                 alt="Günlük ajanda görünümü" data-en-alt="Day-by-day agenda view"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/viberoute/4-yol-ustu-duraklar.webp" width="720" height="1558"
+                 alt="Yol üstü duraklar" data-en-alt="Stops along the way"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/viberoute/6-aktif-gezi.webp" width="720" height="1558"
+                 alt="Aktif gezi takibi" data-en-alt="Live trip tracking"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/viberoute/9-sehir-hakkinda.webp" width="720" height="1558"
+                 alt="Şehir hakkında bilgi kartı" data-en-alt="City information card"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/viberoute/7-ortak-plan.webp" width="720" height="1558"
+                 alt="Ortak plan: arkadaşlarla birlikte planlama" data-en-alt="Shared plan: planning together"
+                 loading="lazy" decoding="async">
+          </div>
+      </div>
+      <p class="gallery-hint" data-en="Drag or scroll sideways →">Yana kaydır →</p>
+    </div>
+  </section>
+
+  <section class="section" id="nasil">
+    <div class="shell split">
+      <div data-reveal>
+        <span class="eyebrow" data-en="How it works">Nasıl çalışıyor</span>
+        <h2 class="h2" data-en="Four steps, start to finish">Baştan sona dört adım</h2>
+        <p class="lede" data-en="No long setup: within a minute you are either playing or your plan is ready.">
+          Uzun bir kurulum yok; bir dakika içinde ya oyundasın ya da planın hazır.
+        </p>
+      </div>
+      <div class="steps" data-stagger="80">
+        <article class="step" data-reveal>
+          <h3 data-en="Set your preferences">Tercihlerini seç</h3>
+          <p data-en="Who with, dates, direction, region, style and budget — all on one screen.">Kiminle, tarih, yön, bölge, tarz ve bütçe — hepsi tek ekranda.</p>
+        </article>
+        <article class="step" data-reveal>
+          <h3 data-en="Tap Draw My Route">Rotamı Çiz'e bas</h3>
+          <p data-en="The AI builds your trip around what you chose.">Yapay zekâ tercihlerine göre gezini kurar.</p>
+        </article>
+        <article class="step" data-reveal>
+          <h3 data-en="Adjust the plan">Planını düzenle</h3>
+          <p data-en="Change days, stops and order however you like — and pick up plans you left half finished.">Günleri, durakları ve sırayı istediğin gibi değiştir; yarım kalan planlarına geri dön.</p>
+        </article>
+        <article class="step" data-reveal>
+          <h3 data-en="Hit the road">Yola çık</h3>
+          <p data-en="Take your plan with you through the live trip screen.">Aktif gezi ekranıyla planını yanında taşı.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kunye">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-en="Details">Künye</span>
+        <h2 class="h2" data-en="At a glance">Bir bakışta</h2>
+      </div>
+      <dl class="specs" data-reveal>
+        <div class="spec">
+          <dt data-en="Category">Kategori</dt>
+          <dd data-en="Travel">Seyahat</dd>
+        </div>
+        <div class="spec">
+          <dt data-en="Platform">Platform</dt>
+          <dd data-en="iOS">iOS</dd>
+        </div>
+        <div class="spec">
+          <dt data-en="Language">Dil</dt>
+          <dd data-en="Turkish · English">Türkçe · İngilizce</dd>
+        </div>
+        <div class="spec">
+          <dt data-en="Highlight">Öne çıkan</dt>
+          <dd data-en="AI routing">Yapay zekâ rota</dd>
+        </div>
+      </dl>
+
+      <div class="kunye__foot" data-reveal>
+        <div class="stores">
+          <a class="store" href="https://apps.apple.com/tr/app/viberoute/id6785224260?l=tr" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.05 12.04c-.03-2.9 2.37-4.3 2.48-4.36-1.35-1.98-3.46-2.25-4.21-2.28-1.79-.18-3.5 1.05-4.41 1.05-.91 0-2.31-1.03-3.8-1-1.96.03-3.77 1.14-4.78 2.89-2.04 3.54-.52 8.78 1.46 11.65.97 1.4 2.12 2.98 3.63 2.92 1.46-.06 2.01-.94 3.77-.94 1.76 0 2.26.94 3.8.91 1.57-.03 2.56-1.43 3.52-2.84 1.11-1.63 1.56-3.21 1.59-3.29-.03-.02-3.05-1.17-3.05-4.71zM14.2 3.9c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.38 1.73-.74.86-1.39 2.23-1.21 3.55 1.29.1 2.6-.65 3.4-1.62z"/></svg>
+            <span class="store__text"><small data-en="Download on the">İndir</small><strong>App Store</strong></span>
+          </a>
+        </div>
+        <p class="kunye__legal" data-en-html="Read the <a href='/gizlilik/viberoute/'>privacy policy</a> for this app.">
+          Bu uygulamanın <a href="/gizlilik/viberoute/">gizlilik politikası</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <a class="next-app" href="/uygulamalar/firuzan-abla/" data-app="firuzan-abla" data-reveal>
+        <div>
+          <small data-en="Next project">Sıradaki proje</small>
+          <strong>Firuzan Abla</strong>
+        </div>
+        <span class="btn btn--primary"><span data-en="Explore">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/"><span class="brand__mark">OK</span><span>Onur Koçak</span></a>
+        <p class="footer__blurb" data-en="Mobile apps and games, built end to end by one person.">
+          Uçtan uca tek kişi tarafından geliştirilen mobil uygulamalar ve oyunlar.
+        </p>
+      </div>
+
+      <div>
+        <h4 data-en="Apps">Uygulamalar</h4>
+        <ul class="footer__list">
+          <li><a href="/uygulamalar/viberoute/">VibeRoute</a></li>
+          <li><a href="/uygulamalar/firuzan-abla/">Firuzan Abla</a></li>
+          <li><a href="/uygulamalar/gecis-oyunu/">Geçiş Oyunu</a></li>
+          <li><a href="/uygulamalar/canak-tavla/">Çanak Tavla</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-en="Links">Bağlantılar</h4>
+        <ul class="footer__list">
+          <li><a href="/#hakkimda" data-en="About">Hakkımda</a></li>
+          <li><a href="/#iletisim" data-en="Contact">İletişim</a></li>
+          <li><a href="https://github.com/onurkkocak" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="/gizlilik/" data-en="Privacy policies">Gizlilik politikaları</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Onur Koçak</span>
+      <span data-en="Built in Turkey">Türkiye'de yapıldı</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/i18n.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

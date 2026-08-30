@@ -1,0 +1,6 @@
+node_modules/
+package-lock.json
+.shots/
+
+# Kaynak görseller — siteye dahil değil, 35 MB. Depoda tutmak istersen bu satırı sil.
+görseller/

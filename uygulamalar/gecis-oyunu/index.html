@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Geçiş Oyunu: Futbol Bilgi — İki kulüpte de forma giymiş futbolcuyu bul.</title>
+<meta name="description" data-en-content="Geçiş Oyunu puts your football memory on the clock. Backed by a pool of over 123,000 players, 4,200 clubs and more than 600,000 transfers: see two clubs, and name the player they share before your opponent does." content="Geçiş Oyunu, futbol hafızanı süreyle sınayan bir bilgi oyunu. 123.000'den fazla futbolcu, 4.200 kulüp ve 600.000'i aşkın transferden oluşan bir veri havuzuyla: iki kulübü gör, ortak oyuncuyu rakibinden önce bul.">
+<meta name="author" content="Onur Koçak">
+<meta name="theme-color" content="#06060c">
+<link rel="canonical" href="https://onur-kocak.com/uygulamalar/gecis-oyunu/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://onur-kocak.com/uygulamalar/gecis-oyunu/">
+<meta property="og:site_name" content="Onur Koçak">
+<meta property="og:title" data-en-content="Geçiş Oyunu: Football Trivia — Name the player who wore both shirts." content="Geçiş Oyunu: Futbol Bilgi — İki kulüpte de forma giymiş futbolcuyu bul.">
+<meta property="og:description" data-en-content="Geçiş Oyunu puts your football memory on the clock. Backed by a pool of over 123,000 players, 4,200 clubs and more than 600,000 transfers: see two clubs, and name the player they share before your opponent does." content="Geçiş Oyunu, futbol hafızanı süreyle sınayan bir bilgi oyunu. 123.000'den fazla futbolcu, 4.200 kulüp ve 600.000'i aşkın transferden oluşan bir veri havuzuyla: iki kulübü gör, ortak oyuncuyu rakibinden önce bul.">
+<meta property="og:image" content="https://onur-kocak.com/assets/img/og/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/base.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+<link rel="stylesheet" href="/assets/css/app.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+
+<body data-app="gecis-oyunu">
+<a class="skip" href="#main" data-en="Skip to content">İçeriğe atla</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="/">
+      <span class="brand__mark">OK</span>
+      <span>Onur Koçak</span>
+    </a>
+
+    <nav class="nav__links" id="nav-links" aria-label="Ana menü" data-en-aria-label="Main menu">
+      <a href="/#uygulamalar" data-en="Apps">Uygulamalar</a>
+      <a href="/#hakkimda" data-en="About">Hakkımda</a>
+      <a href="/#iletisim" data-en="Contact">İletişim</a>
+    </nav>
+
+    <div class="nav__actions">
+      <div class="lang" role="group" aria-label="Dil seçimi" data-en-aria-label="Language">
+        <span class="lang__thumb" aria-hidden="true"></span>
+        <button type="button" data-lang-btn="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menü" data-en-aria-label="Menu"><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="app-hero">
+    <div class="shell">
+      <a class="back" href="/#uygulamalar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All apps">Tüm uygulamalar</span></a>
+
+      <div class="app-hero__grid">
+        <div class="app-hero__text">
+          <div class="app-id" data-reveal>
+            <div class="app-id__icon"><img src="/assets/img/icons/gecis-oyunu.webp" width="256" height="256" alt="Geçiş Oyunu uygulama simgesi" data-en-alt="Geçiş Oyunu app icon"></div>
+            <div>
+              <div class="app-id__meta" data-en="Football · Trivia">Futbol · Bilgi oyunu</div>
+              <div class="app-id__name">Geçiş Oyunu: Futbol Bilgi</div>
+            </div>
+          </div>
+
+          <h1 data-reveal style="--d:80ms" data-en="Name the player who wore both shirts.">İki kulüpte de forma giymiş futbolcuyu bul.</h1>
+
+          <p class="lede" data-reveal style="--d:150ms" data-en="Geçiş Oyunu puts your football memory on the clock. Backed by a pool of over 123,000 players, 4,200 clubs and more than 600,000 transfers: see two clubs, and name the player they share before your opponent does.">Geçiş Oyunu, futbol hafızanı süreyle sınayan bir bilgi oyunu. 123.000'den fazla futbolcu, 4.200 kulüp ve 600.000'i aşkın transferden oluşan bir veri havuzuyla: iki kulübü gör, ortak oyuncuyu rakibinden önce bul.</p>
+
+          <div class="app-hero__chips" data-reveal style="--d:210ms">
+            <span class="chip" data-en="Transfer puzzle">Transfer bilmecesi</span>
+            <span class="chip" data-en="Who Am I">Ben Kimim</span>
+            <span class="chip" data-en="Country mode">Ülke modu</span>
+            <span class="chip" data-en="Head to head">Rakibe karşı</span>
+            <span class="chip" data-en="Practice mode">Alıştırma modu</span>
+          </div>
+
+          <div data-reveal style="--d:270ms">
+            <div class="stores">
+              <a class="store" href="https://play.google.com/store/apps/details?id=com.gecisoyunu.gecis_oyunu" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#00A0FF" d="M3.6 2.3c-.31.33-.49.83-.49 1.48v16.44c0 .65.18 1.15.49 1.48l.06.05 9.2-9.2v-.11L3.66 2.24l-.06.06z"/>
+      <path fill="#FFBC00" d="M16.43 15.62l-3.07-3.07v-.11l3.07-3.07.07.04 3.63 2.07c1.04.59 1.04 1.55 0 2.14l-3.63 2.06-.07.04z"/>
+      <path fill="#FF3A44" d="M16.5 15.58l-3.14-3.14-9.76 9.79c.34.36.9.4 1.54.04l11.36-6.69z"/>
+      <path fill="#00C853" d="M16.5 8.86L5.14 2.17c-.64-.37-1.2-.32-1.54.04l9.76 9.76 3.14-3.11z"/>
+    </svg>
+                <span class="store__text"><small data-en="Get it on">İndir</small><strong>Google Play</strong></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-hero__stage">
+          <div class="shot shot--tall shot--float">
+            <img src="/assets/img/apps/gecis-oyunu/03-modlar.webp" width="720" height="1280"
+                 alt="Oyun modları" data-en-alt="Game modes"
+                 loading="lazy" decoding="async">
+          </div>
+          <div class="shot shot--tall shot--float">
+            <img src="/assets/img/apps/gecis-oyunu/01-soru.webp" width="720" height="1280"
+                 alt="İki kulüpte de oynayan futbolcuyu bul" data-en-alt="Name the player who played for both clubs"
+                 fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ozellikler">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-en="Features">Öne çıkanlar</span>
+        <h2 class="h2" data-en="What it does">Neler yapıyor</h2>
+      </div>
+      <div class="features" data-stagger="70">
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🔗</div>
+          <h3 data-en="The classic transfer puzzle">Klasik transfer bilmecesi</h3>
+          <p data-en="You're given two clubs and you name a player who turned out for both. It looks easy until the clock starts.">İki kulüp verilir, ikisinde de oynamış futbolcuyu yazarsın. Kolay görünür — süre başlayana kadar.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🕵️</div>
+          <h3 data-en="Who Am I">Ben Kimim</h3>
+          <p data-en="Clues open one by one — the earlier you name the player, the more you score.">İpuçları tek tek açılır, futbolcuyu ne kadar erken bilirsen o kadar çok puan.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🌍</div>
+          <h3 data-en="Country mode">Ülke modu</h3>
+          <p data-en="A separate mode built around placing players by their country.">Futbolcuları ülkelerine göre bilme üzerine kurulu ayrı bir mod.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">⚔️</div>
+          <h3 data-en="Race your opponent">Rakibine karşı yarış</h3>
+          <p data-en="Play head to head and climb to the top of the table as you win.">Kafa kafaya oyna, kazandıkça sıralamada zirveye çık.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">🎯</div>
+          <h3 data-en="Practice mode">Alıştırma modu</h3>
+          <p data-en="Train without the pressure, with a right-and-wrong counter to measure yourself.">Baskı olmadan çalış: doğru–yanlış sayacıyla kendini geliştir.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon" aria-hidden="true">📚</div>
+          <h3 data-en="A huge data pool">Devasa veri havuzu</h3>
+          <p data-en="123,000+ players, 4,200 clubs, 600,000+ transfers — the Süper Lig and Europe.">123.000+ futbolcu, 4.200 kulüp, 600.000+ transfer — Süper Lig ve Avrupa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ekranlar">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-en="Screens">Ekranlar</span>
+        <h2 class="h2" data-en="A look inside">İçeriden bir bakış</h2>
+      </div>
+      <div class="gallery">
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/gecis-oyunu/01-soru.webp" width="720" height="1280"
+                 alt="İki kulüpte de oynayan futbolcuyu bul" data-en-alt="Name the player who played for both clubs"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/gecis-oyunu/03-modlar.webp" width="720" height="1280"
+                 alt="Oyun modları" data-en-alt="Game modes"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/gecis-oyunu/04-benkimim.webp" width="720" height="1280"
+                 alt="Ben Kimim modu" data-en-alt="Who Am I mode"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/gecis-oyunu/05-ulke.webp" width="720" height="1280"
+                 alt="Ülke modu" data-en-alt="Country mode"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/gecis-oyunu/02-kart.webp" width="720" height="1280"
+                 alt="Futbolcu kartı" data-en-alt="Player card"
+                 loading="lazy" decoding="async">
+          </div>
+        <div class="shot shot--tall">
+            <img src="/assets/img/apps/gecis-oyunu/06-magaza.webp" width="720" height="1280"
+                 alt="Mağaza" data-en-alt="Store"
+                 loading="lazy" decoding="async">
+          </div>
+      </div>
+      <p class="gallery-hint" data-en="Drag or scroll sideways →">Yana kaydır →</p>
+    </div>
+  </section>
+
+  <section class="section" id="nasil">
+    <div class="shell split">
+      <div data-reveal>
+        <span class="eyebrow" data-en="How it works">Nasıl çalışıyor</span>
+        <h2 class="h2" data-en="Four steps, start to finish">Baştan sona dört adım</h2>
+        <p class="lede" data-en="No long setup: within a minute you are either playing or your plan is ready.">
+          Uzun bir kurulum yok; bir dakika içinde ya oyundasın ya da planın hazır.
+        </p>
+      </div>
+      <div class="steps" data-stagger="80">
+        <article class="step" data-reveal>
+          <h3 data-en="Pick your mode">Modunu seç</h3>
+          <p data-en="Transfer puzzle, Who Am I, Country or practice.">Transfer bilmecesi, Ben Kimim, Ülke ya da alıştırma.</p>
+        </article>
+        <article class="step" data-reveal>
+          <h3 data-en="See the two clubs">İki kulübü gör</h3>
+          <p data-en="You need a name who played for both of the clubs in front of you.">Karşına çıkan iki kulüpte de forma giymiş bir isim bulman gerekiyor.</p>
+        </article>
+        <article class="step" data-reveal>
+          <h3 data-en="Answer before time is up">Süre dolmadan yaz</h3>
+          <p data-en="Type the name and send it — every second works in your opponent's favour.">Aklına gelen ismi yaz ve gönder; her saniye rakibinin lehine işliyor.</p>
+        </article>
+        <article class="step" data-reveal>
+          <h3 data-en="Climb to the top">Zirveye çık</h3>
+          <p data-en="Collect points as you win and climb the rankings.">Kazandıkça puan topla, sıralamada yüksel.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kunye">
+    <div class="shell">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow" data-en="Details">Künye</span>
+        <h2 class="h2" data-en="At a glance">Bir bakışta</h2>
+      </div>
+      <dl class="specs" data-reveal>
+        <div class="spec">
+          <dt data-en="Category">Kategori</dt>
+          <dd data-en="Game · Trivia">Oyun · Bilgi yarışması</dd>
+        </div>
+        <div class="spec">
+          <dt data-en="Platform">Platform</dt>
+          <dd data-en="Android">Android</dd>
+        </div>
+        <div class="spec">
+          <dt data-en="Modes">Modlar</dt>
+          <dd data-en="4 game modes">4 oyun modu</dd>
+        </div>
+        <div class="spec">
+          <dt data-en="Data pool">Veri havuzu</dt>
+          <dd data-en="600,000+ transfers">600.000+ transfer</dd>
+        </div>
+      </dl>
+
+      <div class="kunye__foot" data-reveal>
+        <div class="stores">
+          <a class="store" href="https://play.google.com/store/apps/details?id=com.gecisoyunu.gecis_oyunu" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#00A0FF" d="M3.6 2.3c-.31.33-.49.83-.49 1.48v16.44c0 .65.18 1.15.49 1.48l.06.05 9.2-9.2v-.11L3.66 2.24l-.06.06z"/>
+      <path fill="#FFBC00" d="M16.43 15.62l-3.07-3.07v-.11l3.07-3.07.07.04 3.63 2.07c1.04.59 1.04 1.55 0 2.14l-3.63 2.06-.07.04z"/>
+      <path fill="#FF3A44" d="M16.5 15.58l-3.14-3.14-9.76 9.79c.34.36.9.4 1.54.04l11.36-6.69z"/>
+      <path fill="#00C853" d="M16.5 8.86L5.14 2.17c-.64-.37-1.2-.32-1.54.04l9.76 9.76 3.14-3.11z"/>
+    </svg>
+            <span class="store__text"><small data-en="Get it on">İndir</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <p class="kunye__legal" data-en-html="Read the <a href='/gizlilik/gecis-oyunu/'>privacy policy</a> for this app.">
+          Bu uygulamanın <a href="/gizlilik/gecis-oyunu/">gizlilik politikası</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <a class="next-app" href="/uygulamalar/canak-tavla/" data-app="canak-tavla" data-reveal>
+        <div>
+          <small data-en="Next project">Sıradaki proje</small>
+          <strong>Çanak Tavla</strong>
+        </div>
+        <span class="btn btn--primary"><span data-en="Explore">İncele</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="shell">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="/"><span class="brand__mark">OK</span><span>Onur Koçak</span></a>
+        <p class="footer__blurb" data-en="Mobile apps and games, built end to end by one person.">
+          Uçtan uca tek kişi tarafından geliştirilen mobil uygulamalar ve oyunlar.
+        </p>
+      </div>
+
+      <div>
+        <h4 data-en="Apps">Uygulamalar</h4>
+        <ul class="footer__list">
+          <li><a href="/uygulamalar/viberoute/">VibeRoute</a></li>
+          <li><a href="/uygulamalar/firuzan-abla/">Firuzan Abla</a></li>
+          <li><a href="/uygulamalar/gecis-oyunu/">Geçiş Oyunu</a></li>
+          <li><a href="/uygulamalar/canak-tavla/">Çanak Tavla</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-en="Links">Bağlantılar</h4>
+        <ul class="footer__list">
+          <li><a href="/#hakkimda" data-en="About">Hakkımda</a></li>
+          <li><a href="/#iletisim" data-en="Contact">İletişim</a></li>
+          <li><a href="https://github.com/onurkkocak" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="/gizlilik/" data-en="Privacy policies">Gizlilik politikaları</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Onur Koçak</span>
+      <span data-en="Built in Turkey">Türkiye'de yapıldı</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/i18n.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

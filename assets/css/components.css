@@ -1,0 +1,183 @@
+/* ==========================================================================
+   components.css : screenshots, gallery, store badges, marquee, features
+   ========================================================================== */
+
+/* ---------- Screenshot ----------------------------------------------------
+   The image decides the height — the sources are a mix of tall store posters
+   (9:19.5), raw portrait screenshots (9:16) and landscape game captures
+   (16:9), so nothing here forces an aspect ratio or crops.
+   -------------------------------------------------------------------------- */
+.shot {
+  position: relative;
+  flex: none;
+  width: var(--w, 260px);
+  border-radius: clamp(14px, 1.6vw, 22px);
+  overflow: hidden;
+  background: #0a0a12;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 28px 60px -30px rgba(0, 0, 0, 0.95),
+    0 0 64px -26px color-mix(in srgb, var(--accent) 65%, transparent);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease), border-color 0.5s var(--ease);
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* soft top sheen so a flat screenshot still reads as a physical object */
+.shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(122deg, rgba(255, 255, 255, 0.13) 0%, transparent 32%, transparent 74%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.shot--wide { --w: 520px; }
+
+/* --x / --rot / --s let a shot keep its resting position while it drifts. */
+.shot--float { animation: float 7s var(--ease) infinite alternate; }
+.shot--float:nth-of-type(2) { animation-duration: 8.6s; animation-delay: -2s; }
+.shot--float:nth-of-type(3) { animation-duration: 9.4s; animation-delay: -4s; }
+
+@keyframes float {
+  from { transform: translate(var(--x, 0), -10px) rotate(var(--rot, 0deg)) scale(var(--s, 1)); }
+  to   { transform: translate(var(--x, 0),  12px) rotate(var(--rot, 0deg)) scale(var(--s, 1)); }
+}
+
+/* ---------- Screenshot gallery ---------- */
+.gallery {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(0.9rem, 2.2vw, 1.75rem);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding: 0.5rem 0 1.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  /* let the rail bleed to the screen edge on phones */
+  margin-inline: calc(-1 * var(--bleed, 0px));
+  padding-inline: var(--bleed, 0px);
+}
+.gallery > * { scroll-snap-align: center; }
+.gallery::-webkit-scrollbar { height: 6px; }
+.gallery::-webkit-scrollbar-track { background: var(--surface); border-radius: 999px; }
+.gallery::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+}
+.gallery .shot { --w: clamp(198px, 24vw, 268px); }
+.gallery .shot--wide { --w: clamp(300px, 46vw, 560px); }
+
+.gallery-hint {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-3);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 720px) {
+  .gallery { --bleed: 1.25rem; }
+}
+
+/* ---------- Store badges ---------- */
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.store {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 1.3rem 0.6rem 1.05rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.store:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.store svg { width: 26px; height: 26px; flex: none; }
+.store__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  text-align: left;
+}
+.store__text small {
+  font-size: 0.66rem;
+  color: var(--text-3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.store__text strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Marquee ---------- */
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  padding: 0.4rem 0;
+}
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  width: max-content;
+  animation: slide 34s linear infinite;
+}
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee__track span {
+  font-family: var(--font-display);
+  font-size: clamp(0.92rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+@keyframes slide { to { transform: translateX(-50%); } }
+
+/* ---------- Feature grid ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: clamp(0.9rem, 2vw, 1.5rem);
+}
+.feature {
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: linear-gradient(160deg, var(--surface-2), transparent);
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease), background 0.4s var(--ease);
+}
+.feature:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent);
+}
+.feature__icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  margin-bottom: 1.1rem;
+  font-size: 1.25rem;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.feature h3 { font-size: 1.04rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+.feature p { color: var(--text-2); font-size: 0.92rem; }

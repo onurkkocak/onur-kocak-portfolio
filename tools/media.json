@@ -1,0 +1,242 @@
+{
+  "viberoute": {
+    "icon": null,
+    "media": [
+      {
+        "src": "/assets/img/apps/viberoute/1-ana-ekran.webp",
+        "kind": "tall",
+        "alt": [
+          "Ana ekran: gezi tercihleri ve Rotamı Çiz",
+          "Home screen: trip preferences and Draw My Route"
+        ],
+        "width": 720,
+        "height": 1558
+      },
+      {
+        "src": "/assets/img/apps/viberoute/3-gun-ajanda.webp",
+        "kind": "tall",
+        "alt": [
+          "Günlük ajanda görünümü",
+          "Day-by-day agenda view"
+        ],
+        "width": 720,
+        "height": 1558
+      },
+      {
+        "src": "/assets/img/apps/viberoute/4-yol-ustu-duraklar.webp",
+        "kind": "tall",
+        "alt": [
+          "Yol üstü duraklar",
+          "Stops along the way"
+        ],
+        "width": 720,
+        "height": 1558
+      },
+      {
+        "src": "/assets/img/apps/viberoute/6-aktif-gezi.webp",
+        "kind": "tall",
+        "alt": [
+          "Aktif gezi takibi",
+          "Live trip tracking"
+        ],
+        "width": 720,
+        "height": 1558
+      },
+      {
+        "src": "/assets/img/apps/viberoute/9-sehir-hakkinda.webp",
+        "kind": "tall",
+        "alt": [
+          "Şehir hakkında bilgi kartı",
+          "City information card"
+        ],
+        "width": 720,
+        "height": 1558
+      },
+      {
+        "src": "/assets/img/apps/viberoute/7-ortak-plan.webp",
+        "kind": "tall",
+        "alt": [
+          "Ortak plan: arkadaşlarla birlikte planlama",
+          "Shared plan: planning together"
+        ],
+        "width": 720,
+        "height": 1558
+      }
+    ]
+  },
+  "firuzan-abla": {
+    "icon": "/assets/img/icons/firuzan-abla.webp",
+    "media": [
+      {
+        "src": "/assets/img/apps/firuzan-abla/01-ana-sayfa.webp",
+        "kind": "tall",
+        "alt": [
+          "Ana sayfa: kahve falı, burç, tarot ve doğum haritası",
+          "Home: coffee reading, horoscope, tarot and birth chart"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/firuzan-abla/06-fal-sohbeti.webp",
+        "kind": "tall",
+        "alt": [
+          "Fal sohbeti ekranı",
+          "Fortune chat screen"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/firuzan-abla/09-tarot-kart.webp",
+        "kind": "tall",
+        "alt": [
+          "Tarot kartı açılımı",
+          "A drawn tarot card"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/firuzan-abla/11-burc-yorumu.webp",
+        "kind": "tall",
+        "alt": [
+          "Burç yorumu",
+          "Horoscope reading"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/firuzan-abla/08-dogum-haritasi.webp",
+        "kind": "tall",
+        "alt": [
+          "Doğum haritası",
+          "Birth chart"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/firuzan-abla/03-sinastri-uyum-puani.webp",
+        "kind": "tall",
+        "alt": [
+          "Sinastri uyum puanı",
+          "Synastry compatibility score"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/firuzan-abla/04-iki-harita-ust-uste.webp",
+        "kind": "tall",
+        "alt": [
+          "İki doğum haritası üst üste",
+          "Two birth charts overlaid"
+        ],
+        "width": 720,
+        "height": 1280
+      }
+    ]
+  },
+  "gecis-oyunu": {
+    "icon": "/assets/img/icons/gecis-oyunu.webp",
+    "media": [
+      {
+        "src": "/assets/img/apps/gecis-oyunu/01-soru.webp",
+        "kind": "tall",
+        "alt": [
+          "İki kulüpte de oynayan futbolcuyu bul",
+          "Name the player who played for both clubs"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/gecis-oyunu/03-modlar.webp",
+        "kind": "tall",
+        "alt": [
+          "Oyun modları",
+          "Game modes"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/gecis-oyunu/04-benkimim.webp",
+        "kind": "tall",
+        "alt": [
+          "Ben Kimim modu",
+          "Who Am I mode"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/gecis-oyunu/05-ulke.webp",
+        "kind": "tall",
+        "alt": [
+          "Ülke modu",
+          "Country mode"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/gecis-oyunu/02-kart.webp",
+        "kind": "tall",
+        "alt": [
+          "Futbolcu kartı",
+          "Player card"
+        ],
+        "width": 720,
+        "height": 1280
+      },
+      {
+        "src": "/assets/img/apps/gecis-oyunu/06-magaza.webp",
+        "kind": "tall",
+        "alt": [
+          "Mağaza",
+          "Store"
+        ],
+        "width": 720,
+        "height": 1280
+      }
+    ]
+  },
+  "canak-tavla": {
+    "icon": "/assets/img/icons/canak-tavla.webp",
+    "media": [
+      {
+        "src": "/assets/img/apps/canak-tavla/shot-lobby.webp",
+        "kind": "wide",
+        "alt": [
+          "Lobi: masa seçimi ve hemen oyna",
+          "Lobby: table selection and quick play"
+        ],
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "src": "/assets/img/apps/canak-tavla/shot-league.webp",
+        "kind": "wide",
+        "alt": [
+          "Lig ekranı",
+          "League screen"
+        ],
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "src": "/assets/img/apps/canak-tavla/shot-daily.webp",
+        "kind": "wide",
+        "alt": [
+          "Günlük bonus çarkı",
+          "Daily bonus wheel"
+        ],
+        "width": 1280,
+        "height": 600
+      }
+    ]
+  }
+}

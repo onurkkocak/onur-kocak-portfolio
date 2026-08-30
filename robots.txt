@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /görseller/
+
+Sitemap: https://onur-kocak.com/sitemap.xml
