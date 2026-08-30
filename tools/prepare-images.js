@@ -37,15 +37,24 @@ async function run() {
     console.log("\n" + slug);
 
     /* ---- icon ---- */
+    const iconPath = path.join(ROOT, "assets", "img", "icons", slug + ".webp");
     let icon = null;
+
     if (cfg.icon) {
       const src = path.join(SRC, cfg.icon.src);
       let img = sharp(src);
       if (cfg.icon.crop) img = img.extract(cfg.icon.crop);
-      const iconPath = path.join(ROOT, "assets", "img", "icons", slug + ".webp");
       await img.resize(256, 256, { fit: "cover" }).webp({ quality: 88 }).toFile(iconPath);
       icon = "/assets/img/icons/" + slug + ".webp";
       console.log("  icon  → " + slug + ".webp");
+    } else if (fs.existsSync(iconPath)) {
+      /* No source to crop from, but a ready-made icon was dropped in by hand
+         (VibeRoute's comes from its App Store artwork). Use it rather than
+         letting the pages silently fall back to the emoji mark. */
+      icon = "/assets/img/icons/" + slug + ".webp";
+      console.log("  icon  → " + slug + ".webp (hazır dosya)");
+    } else {
+      console.log("  icon  → yok, emoji kullanılacak");
     }
 
     /* ---- screenshots ---- */

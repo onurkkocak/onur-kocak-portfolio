@@ -8,7 +8,8 @@
 
 module.exports = {
   viberoute: {
-    /* No standalone app icon supplied yet — the page falls back to the emoji mark. */
+    /* Icon comes from the App Store artwork and already sits at
+       assets/img/icons/viberoute.webp — prepare-images.js picks it up. */
     icon: null,
     media: [
       { src: "viberoute/1-ana-ekran.png",        kind: "tall", alt: ["Ana ekran: gezi tercihleri ve Rotamı Çiz", "Home screen: trip preferences and Draw My Route"] },
