@@ -377,21 +377,101 @@ function privacyPage(app) {
 
   const li = (pairs) => pairs.map((p) => `          <li ${EN(p)}>${TR(p)}</li>`).join("\n");
 
+  /* Sections are assembled per app, so an app without ads or purchases
+     simply has no such section — and the numbering still runs 1..n. */
   const sections = [
-    ["Toplanan veriler", "Data we collect"],
-    ["Verilerin kullanım amacı", "How the data is used"],
-    ["Üçüncü taraf servisler", "Third-party services"],
-    ["Veri saklama ve güvenlik", "Retention and security"],
-    ["Çocukların gizliliği", "Children's privacy"],
-    ["Haklarınız", "Your rights"],
-    ["Değişiklikler", "Changes to this policy"],
-    ["İletişim", "Contact"],
+    {
+      title: ["Toplanan veriler", "Data we collect"],
+      body: `        <p data-en="The app collects only what it needs in order to work:">Uygulama yalnızca çalışması için gereken verileri toplar:</p>
+        <ul>
+${li(app.privacy.collects)}
+        </ul>`,
+    },
+    {
+      title: ["Verilerin kullanım amacı", "How the data is used"],
+      body: `        <ul>
+          <li data-en="To provide the features of the app and keep them working correctly.">Uygulamanın özelliklerini sunmak ve doğru çalışmasını sağlamak.</li>
+          <li data-en="To find and fix errors and crashes.">Hataları ve çökmeleri tespit edip gidermek.</li>
+          <li data-en="To understand which features are used, so the app can be improved.">Hangi özelliklerin kullanıldığını anlayarak uygulamayı geliştirmek.</li>
+        </ul>
+        <p data-en-html="Your personal data is <strong>never sold</strong>.${app.hasAds ? " How your advertising identifier is used to show ads is described in the Advertising section below." : " It is not shared with third parties for advertising purposes."}"><strong>Kişisel verileriniz satılmaz.</strong>${app.hasAds ? " Reklam gösterimi için reklam kimliğinizin nasıl kullanıldığını aşağıdaki Reklamlar bölümünde bulabilirsiniz." : " Reklam amacıyla üçüncü taraflarla paylaşılmaz."}</p>`,
+    },
+    {
+      title: ["Üçüncü taraf servisler", "Third-party services"],
+      body: `        <p data-en="The app uses the following third-party services, each of which has its own privacy policy:">Uygulama, her biri kendi gizlilik politikasına sahip aşağıdaki üçüncü taraf servisleri kullanır:</p>
+        <ul>
+${li(app.privacy.thirdParty)}
+        </ul>`,
+    },
   ];
 
-  const toc = sections.map((s, i) =>
-    `            <li><a href="#b${i + 1}" ${EN(s)}>${TR(s)}</a></li>`).join("\n");
+  if (app.hasAds) {
+    sections.push({
+      title: ["Reklamlar ve reklam kimliği", "Advertising and your ad identifier"],
+      body: `        <p data-en="Ads in the app are served through Google AdMob. To choose which ads to show, AdMob may use your device's advertising identifier (Android Advertising ID or Apple IDFA) along with technical information such as device type and approximate location. That data is processed by Google, not by us — see Google's own policy for the details.">
+          Uygulamadaki reklamlar Google AdMob aracılığıyla gösterilir. AdMob, hangi reklamların gösterileceğini belirlemek için cihazının reklam kimliğini (Android Reklam Kimliği veya Apple IDFA) ve cihaz türü, yaklaşık konum gibi teknik bilgileri kullanabilir. Bu veriler bizim tarafımızdan değil, doğrudan Google tarafından işlenir; ayrıntılar Google'ın kendi politikasındadır.
+        </p>
+        <p data-en-html="You can turn personalised ads off at any time: on Android under <strong>Settings → Google → Ads</strong>, on iOS under <strong>Settings → Privacy &amp; Security → Tracking</strong>. Read <a href='https://policies.google.com/technologies/ads' target='_blank' rel='noopener'>how Google uses advertising data</a>.">
+          Kişiselleştirilmiş reklamları istediğin zaman kapatabilirsin: Android'de <strong>Ayarlar → Google → Reklamlar</strong>, iOS'ta <strong>Ayarlar → Gizlilik ve Güvenlik → İzleme</strong>. Ayrıntılar için <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google'ın reklam verilerini nasıl kullandığını</a> okuyabilirsin.
+        </p>`,
+    });
+  }
 
-  const h = (i) => `<h2 id="b${i + 1}" ${EN([`${i + 1}. ${sections[i][0]}`, `${i + 1}. ${sections[i][1]}`])}>${i + 1}. ${esc(sections[i][0])}</h2>`;
+  if (app.hasPurchases) {
+    sections.push({
+      title: ["Uygulama içi satın almalar", "In-app purchases"],
+      body: `        <p data-en-html="Purchases and subscriptions are managed through RevenueCat. <strong>Your payment details never reach us</strong> — payments are handled entirely by Google Play or the App Store. RevenueCat stores only an anonymous user identifier and your purchase records, so the app knows what you own.">
+          Satın almalar ve abonelikler RevenueCat üzerinden yönetilir. <strong>Ödeme bilgilerin bize hiçbir zaman ulaşmaz</strong>; ödemeler tümüyle Google Play veya App Store tarafından işlenir. RevenueCat yalnızca anonim bir kullanıcı kimliği ve satın alma kayıtlarını saklar, böylece uygulama neye sahip olduğunu bilir.
+        </p>`,
+    });
+  }
+
+  sections.push(
+    {
+      title: ["Veri saklama ve güvenlik", "Retention and security"],
+      body: `        <p data-en="Data is kept only for as long as the feature it belongs to requires it, and is protected with industry-standard measures such as encrypted transport. No method of transmission over the internet is ever completely secure, so absolute security cannot be guaranteed.">
+          Veriler, ait oldukları özellik için gerekli olduğu sürece saklanır ve şifreli iletim gibi sektör standardı önlemlerle korunur. İnternet üzerinden hiçbir veri aktarımı tümüyle güvenli olmadığından mutlak güvenlik garanti edilemez.
+        </p>`,
+    },
+    {
+      title: ["Çocukların gizliliği", "Children's privacy"],
+      body: `        <p data-en="The app is not directed at children under 13 and does not knowingly collect data from them. If you believe a child has provided data through the app, contact us and it will be deleted.">
+          Uygulama 13 yaş altındaki çocuklara yönelik değildir ve bilerek onlardan veri toplamaz. Bir çocuğun uygulama üzerinden veri paylaştığını düşünüyorsanız bize ulaşın; ilgili veriler silinecektir.
+        </p>`,
+    },
+    {
+      title: ["Haklarınız", "Your rights"],
+      body: `        <p data-en="Under KVKK (Turkey) and GDPR (EU) you have the right to:">KVKK ve GDPR kapsamında şu haklara sahipsiniz:</p>
+        <ul>
+          <li data-en="Learn whether your personal data is being processed, and request a copy of it.">Kişisel verilerinizin işlenip işlenmediğini öğrenmek ve bir kopyasını talep etmek.</li>
+          <li data-en="Ask for incorrect or incomplete data to be corrected.">Eksik veya yanlış işlenmiş verilerin düzeltilmesini istemek.</li>
+          <li data-en="Ask for your data to be deleted.">Verilerinizin silinmesini talep etmek.</li>
+          <li data-en="Object to the processing of your data.">Verilerinizin işlenmesine itiraz etmek.</li>
+        </ul>
+        <p data-en-html="To exercise any of these rights, write to <a href='mailto:${site.email}'>${site.email}</a>.">
+          Bu haklarınızı kullanmak için <a href="mailto:${site.email}">${site.email}</a> adresine yazabilirsiniz.
+        </p>`,
+    },
+    {
+      title: ["Değişiklikler", "Changes to this policy"],
+      body: `        <p data-en="This policy may be updated as the app changes. The date at the top of the page always shows the current version.">
+          Bu politika, uygulama geliştikçe güncellenebilir. Sayfanın başındaki tarih her zaman geçerli sürümü gösterir.
+        </p>`,
+    },
+    {
+      title: ["İletişim", "Contact"],
+      body: `        <p data-en-html="Questions about this policy? Write to <a href='mailto:${site.email}'>${site.email}</a>.">
+          Bu politikayla ilgili sorularınız için <a href="mailto:${site.email}">${site.email}</a> adresine yazabilirsiniz.
+        </p>`,
+    }
+  );
+
+  const toc = sections.map((s, i) =>
+    `            <li><a href="#b${i + 1}" ${EN(s.title)}>${TR(s.title)}</a></li>`).join("\n");
+
+  const body = sections.map((s, i) =>
+    `        <h2 id="b${i + 1}" ${EN([`${i + 1}. ${s.title[0]}`, `${i + 1}. ${s.title[1]}`])}>${i + 1}. ${esc(s.title[0])}</h2>
+${s.body}`).join("\n\n");
 
   const note = app.privacy.note
     ? `        <p class="legal__note" ${EN(app.privacy.note)}><strong>${TR(app.privacy.note)}</strong></p>`
@@ -422,57 +502,7 @@ ${toc}
         </p>
 ${note}
 
-        ${h(0)}
-        <p data-en="The app collects only what it needs in order to work:">Uygulama yalnızca çalışması için gereken verileri toplar:</p>
-        <ul>
-${li(app.privacy.collects)}
-        </ul>
-
-        ${h(1)}
-        <ul>
-          <li data-en="To provide the features of the app and keep them working correctly.">Uygulamanın özelliklerini sunmak ve doğru çalışmasını sağlamak.</li>
-          <li data-en="To find and fix errors and crashes.">Hataları ve çökmeleri tespit edip gidermek.</li>
-          <li data-en="To understand which features are used, so the app can be improved.">Hangi özelliklerin kullanıldığını anlayarak uygulamayı geliştirmek.</li>
-        </ul>
-        <p data-en-html="Your data is <strong>never sold</strong>, and it is not shared with third parties for advertising purposes."><strong>Verileriniz satılmaz</strong> ve reklam amacıyla üçüncü taraflarla paylaşılmaz.</p>
-
-        ${h(2)}
-        <p data-en="The app uses the following kinds of third-party services, each of which has its own privacy policy:">Uygulama, her biri kendi gizlilik politikasına sahip aşağıdaki türde üçüncü taraf servisleri kullanır:</p>
-        <ul>
-${li(app.privacy.thirdParty)}
-        </ul>
-
-        ${h(3)}
-        <p data-en="Data is kept only for as long as the feature it belongs to requires it, and is protected with industry-standard measures such as encrypted transport. No method of transmission over the internet is ever completely secure, so absolute security cannot be guaranteed.">
-          Veriler, ait oldukları özellik için gerekli olduğu sürece saklanır ve şifreli iletim gibi sektör standardı önlemlerle korunur. İnternet üzerinden hiçbir veri aktarımı tümüyle güvenli olmadığından mutlak güvenlik garanti edilemez.
-        </p>
-
-        ${h(4)}
-        <p data-en="The app is not directed at children under 13 and does not knowingly collect data from them. If you believe a child has provided data through the app, contact us and it will be deleted.">
-          Uygulama 13 yaş altındaki çocuklara yönelik değildir ve bilerek onlardan veri toplamaz. Bir çocuğun uygulama üzerinden veri paylaştığını düşünüyorsanız bize ulaşın; ilgili veriler silinecektir.
-        </p>
-
-        ${h(5)}
-        <p data-en="Under KVKK (Turkey) and GDPR (EU) you have the right to:">KVKK ve GDPR kapsamında şu haklara sahipsiniz:</p>
-        <ul>
-          <li data-en="Learn whether your personal data is being processed, and request a copy of it.">Kişisel verilerinizin işlenip işlenmediğini öğrenmek ve bir kopyasını talep etmek.</li>
-          <li data-en="Ask for incorrect or incomplete data to be corrected.">Eksik veya yanlış işlenmiş verilerin düzeltilmesini istemek.</li>
-          <li data-en="Ask for your data to be deleted.">Verilerinizin silinmesini talep etmek.</li>
-          <li data-en="Object to the processing of your data.">Verilerinizin işlenmesine itiraz etmek.</li>
-        </ul>
-        <p data-en-html="To exercise any of these rights, write to <a href='mailto:${site.email}'>${site.email}</a>.">
-          Bu haklarınızı kullanmak için <a href="mailto:${site.email}">${site.email}</a> adresine yazabilirsiniz.
-        </p>
-
-        ${h(6)}
-        <p data-en="This policy may be updated as the app changes. The date at the top of the page always shows the current version.">
-          Bu politika, uygulama geliştikçe güncellenebilir. Sayfanın başındaki tarih her zaman geçerli sürümü gösterir.
-        </p>
-
-        ${h(7)}
-        <p data-en-html="Questions about this policy? Write to <a href='mailto:${site.email}'>${site.email}</a>.">
-          Bu politikayla ilgili sorularınız için <a href="mailto:${site.email}">${site.email}</a> adresine yazabilirsiniz.
-        </p>
+${body}
       </div>
     </div>
   </div>

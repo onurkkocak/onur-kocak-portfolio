@@ -15,8 +15,7 @@ const site = {
   origin: "https://onur-kocak.com",
   author: "Onur Koçak",
   github: "https://github.com/onurkkocak",
-  // TODO(onur): yayınlamak istediğin e-posta adresi
-  email: "iletisim@onur-kocak.com",
+  email: "support@onur-kocak.com",
   legalUpdated: ["30 Ağustos 2026", "30 August 2026"],
 };
 
@@ -86,6 +85,10 @@ const apps = [
       ios: "https://apps.apple.com/tr/app/viberoute/id6785224260?l=tr",
       android: null,
     },
+    // Reklam veya satın alma yoksa false yap; politika bölümü de kalkar.
+    hasAds: true,
+    hasPurchases: true,
+
     privacy: {
       collects: [
         ["Gezi planların ve seçtiğin tarih, yön, bölge, tarz ve bütçe gibi tercihler.",
@@ -98,10 +101,15 @@ const apps = [
          "Basic technical data such as crash and error logs."],
       ],
       thirdParty: [
-        ["Rota önerilerinin üretilmesi için kullanılan yapay zekâ servisleri",
-         "AI services used to generate route suggestions"],
-        ["Harita ve yer bilgisi sağlayıcıları", "Map and place data providers"],
-        ["Çökme raporlama ve temel kullanım analitiği", "Crash reporting and basic usage analytics"],
+        // TODO(onur): rota metinlerini üreten yapay zekâ sağlayıcısının adını yaz
+        ["Rota önerilerinin üretilmesi için kullanılan yapay zekâ servisi",
+         "The AI service used to generate route suggestions"],
+        ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
+         "RevenueCat — in-app purchase and subscription management"],
+        ["Google AdMob — uygulama içinde reklam gösterimi",
+         "Google AdMob — serving ads inside the app"],
+        ["Google Play / App Store — dağıtım, ödeme işlemleri ve otomatik çökme raporları",
+         "Google Play / App Store — distribution, payment processing and automatic crash reports"],
       ],
     },
   },
@@ -171,6 +179,10 @@ const apps = [
       ios: null,
       android: "https://play.google.com/store/apps/details?id=com.firuzanabla.app",
     },
+    // Reklam veya satın alma yoksa false yap; politika bölümü de kalkar.
+    hasAds: true,
+    hasPurchases: true,
+
     privacy: {
       collects: [
         ["Doğum haritası ve sinastri hesaplaması için verdiğin doğum tarihi, saati ve yeri bilgileri.",
@@ -181,10 +193,15 @@ const apps = [
          "Your in-app preferences, token balance and past reading history."],
       ],
       thirdParty: [
-        ["Fal ve yorum metinlerinin üretilmesi için kullanılan yapay zekâ servisleri",
-         "AI services used to generate reading and interpretation text"],
-        ["Uygulama içi satın alma altyapısı", "In-app purchase infrastructure"],
-        ["Çökme raporlama ve temel kullanım analitiği", "Crash reporting and basic usage analytics"],
+        // TODO(onur): fal metinlerini üreten yapay zekâ sağlayıcısının adını yaz
+        ["Fal ve yorum metinlerinin üretilmesi için kullanılan yapay zekâ servisi",
+         "The AI service used to generate reading and interpretation text"],
+        ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
+         "RevenueCat — in-app purchase and subscription management"],
+        ["Google AdMob — uygulama içinde reklam gösterimi",
+         "Google AdMob — serving ads inside the app"],
+        ["Google Play / App Store — dağıtım, ödeme işlemleri ve otomatik çökme raporları",
+         "Google Play / App Store — distribution, payment processing and automatic crash reports"],
       ],
       note: [
         "Firuzan Abla eğlence amaçlıdır. Uygulamadaki yorumlar tıbbi, hukuki veya finansal tavsiye yerine geçmez.",
@@ -259,6 +276,10 @@ const apps = [
       ios: null,
       android: "https://play.google.com/store/apps/details?id=com.gecisoyunu.gecis_oyunu",
     },
+    // Reklam veya satın alma yoksa false yap; politika bölümü de kalkar.
+    hasAds: true,
+    hasPurchases: true,
+
     privacy: {
       collects: [
         ["Oyuncu adın, avatarın ve oyun içi puan ile sıralama bilgilerin.",
@@ -270,8 +291,12 @@ const apps = [
       ],
       thirdParty: [
         ["Çok oyunculu eşleşme ve sunucu altyapısı", "Multiplayer matchmaking and server infrastructure"],
-        ["Uygulama içi satın alma altyapısı", "In-app purchase infrastructure"],
-        ["Çökme raporlama ve temel kullanım analitiği", "Crash reporting and basic usage analytics"],
+        ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
+         "RevenueCat — in-app purchase and subscription management"],
+        ["Google AdMob — uygulama içinde reklam gösterimi",
+         "Google AdMob — serving ads inside the app"],
+        ["Google Play / App Store — dağıtım, ödeme işlemleri ve otomatik çökme raporları",
+         "Google Play / App Store — distribution, payment processing and automatic crash reports"],
       ],
     },
   },
@@ -341,6 +366,10 @@ const apps = [
       ios: null,
       android: "https://play.google.com/store/apps/details?id=com.onurkocak.tavlaplus",
     },
+    // Reklam veya satın alma yoksa false yap; politika bölümü de kalkar.
+    hasAds: true,
+    hasPurchases: true,
+
     privacy: {
       collects: [
         ["Oyuncu adın, avatarın, seviyen, jeton bakiyen ve lig sıralaman.",
@@ -352,8 +381,12 @@ const apps = [
       ],
       thirdParty: [
         ["Çok oyunculu eşleşme ve sunucu altyapısı", "Multiplayer matchmaking and server infrastructure"],
-        ["Ödüllü video ve uygulama içi satın alma altyapısı", "Rewarded video and in-app purchase infrastructure"],
-        ["Çökme raporlama ve temel kullanım analitiği", "Crash reporting and basic usage analytics"],
+        ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
+         "RevenueCat — in-app purchase and subscription management"],
+        ["Google AdMob — uygulama içinde reklam gösterimi",
+         "Google AdMob — serving ads inside the app"],
+        ["Google Play / App Store — dağıtım, ödeme işlemleri ve otomatik çökme raporları",
+         "Google Play / App Store — distribution, payment processing and automatic crash reports"],
       ],
     },
   },
