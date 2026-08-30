@@ -88,6 +88,11 @@ const apps = [
     // Reklam veya satın alma yoksa false yap; politika bölümü de kalkar.
     hasAds: true,
     hasPurchases: true,
+    // Yapay zekâya ne gönderildiği; kaldırırsan o politika bölümü de kalkar.
+    ai: [
+      "Rotanı oluşturabilmek için seçtiğin tercihler — kiminle gittiğin, tarih, yön, bölge, tarz ve bütçe — ile yazdığın serbest metinler Google Gemini'ye gönderilir.",
+      "So your route can be generated, the preferences you choose — who you travel with, dates, direction, region, style and budget — along with any free text you type, are sent to Google Gemini.",
+    ],
 
     privacy: {
       collects: [
@@ -101,9 +106,8 @@ const apps = [
          "Basic technical data such as crash and error logs."],
       ],
       thirdParty: [
-        // TODO(onur): rota metinlerini üreten yapay zekâ sağlayıcısının adını yaz
-        ["Rota önerilerinin üretilmesi için kullanılan yapay zekâ servisi",
-         "The AI service used to generate route suggestions"],
+        ["Google Gemini — rota önerilerinin üretilmesi",
+         "Google Gemini — generating route suggestions"],
         ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
          "RevenueCat — in-app purchase and subscription management"],
         ["Google AdMob — uygulama içinde reklam gösterimi",
@@ -182,6 +186,11 @@ const apps = [
     // Reklam veya satın alma yoksa false yap; politika bölümü de kalkar.
     hasAds: true,
     hasPurchases: true,
+    // Yapay zekâya ne gönderildiği; kaldırırsan o politika bölümü de kalkar.
+    ai: [
+      "Falının yorumlanabilmesi için yüklediğin fincan fotoğrafları, doğum bilgilerin ve sorduğun sorular Google Gemini'ye gönderilir.",
+      "So your reading can be interpreted, the cup photos you upload, your birth details and the questions you ask are sent to Google Gemini.",
+    ],
 
     privacy: {
       collects: [
@@ -193,9 +202,8 @@ const apps = [
          "Your in-app preferences, token balance and past reading history."],
       ],
       thirdParty: [
-        // TODO(onur): fal metinlerini üreten yapay zekâ sağlayıcısının adını yaz
-        ["Fal ve yorum metinlerinin üretilmesi için kullanılan yapay zekâ servisi",
-         "The AI service used to generate reading and interpretation text"],
+        ["Google Gemini — fal ve yorum metinlerinin üretilmesi",
+         "Google Gemini — generating reading and interpretation text"],
         ["RevenueCat — uygulama içi satın alma ve abonelik yönetimi",
          "RevenueCat — in-app purchase and subscription management"],
         ["Google AdMob — uygulama içinde reklam gösterimi",

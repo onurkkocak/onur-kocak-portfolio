@@ -405,6 +405,19 @@ ${li(app.privacy.thirdParty)}
     },
   ];
 
+  if (app.ai) {
+    sections.push({
+      title: ["Yapay zekâ ile üretilen içerik", "AI-generated content"],
+      body: `        <p ${EN(app.ai)}>${TR(app.ai)}</p>
+        <p data-en-html="Google processes that content under <a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>Google's own privacy policy</a>. Send only what you are comfortable sharing, and avoid entering other people's personal details.">
+          Bu içerik Google tarafından <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google'ın kendi gizlilik politikası</a> kapsamında işlenir. Yalnızca paylaşmakta rahat olduğun bilgileri gönder ve başkalarının kişisel bilgilerini girmemeye özen göster.
+        </p>
+        <p data-en="Answers are produced by a language model. They can be wrong or incomplete, and are not a substitute for professional advice.">
+          Yanıtlar bir dil modeli tarafından üretilir; yanlış veya eksik olabilir ve profesyonel tavsiye yerine geçmez.
+        </p>`,
+    });
+  }
+
   if (app.hasAds) {
     sections.push({
       title: ["Reklamlar ve reklam kimliği", "Advertising and your ad identifier"],
